@@ -1,4 +1,3 @@
-
 // plan
 
 // when i visit the page
@@ -70,7 +69,6 @@ function createTimeBlock(hour) {
 
   return row;
 };
-
 
 // header clock
 $(function () {
