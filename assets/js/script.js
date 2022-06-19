@@ -22,10 +22,8 @@ function createTimeBlock(hour) {
 
   // if timeblock is past, it has past class from css
   let isPast = hour < currentHour;
-
   // if timeblock is present, it has present class from css
   let isPresent = hour === currentHour;
-
   // if timeblock is future, it has future class from css
   let isFuture = hour > currentHour;
 
@@ -45,30 +43,30 @@ function createTimeBlock(hour) {
 
   row.attr('class', rowClass);
 
-  let timeCol = $("<div>");
-  timeCol.attr('class', 'time-col col-2');
+  let timeColumn = $("<div>");
+  timeColumn.attr('class', 'time-col col-2');
 
-  timeCol.text(hour + ":00");
+  timeColumn.text(hour + ":00");
 
-  let textareaCol = $("<div >");
+  let textareaColumn = $("<div >");
 
-  textareaCol.attr('class', 'textarea-col col-8');
+  textareaColumn.attr('class', 'textarea-col col-8');
   let textarea = $('<textarea rows="3" cols="24">');
-  textareaCol.append(textarea);
+  textareaColumn.append(textarea);
 
   // existing details from local storage
   let existingNotes = localStorage.getItem(hour);
   textarea.val(existingNotes);
 
-  let buttonCol = $("<div>");
-  buttonCol.attr('class', 'button-col col-2');
+  let buttonColumn = $("<div>");
+  buttonColumn.attr('class', 'button-col col-2');
 
-  let saveButton = $('<button class="btn btn-primary save-button">');
+  let saveButton = $('<button class="btn btn-primary save-button saveBtn">');  
   saveButton.text('Save');
 
-  buttonCol.append(saveButton);
+  buttonColumn.append(saveButton);
 
-  row.append(timeCol, textareaCol, buttonCol);
+  row.append(timeColumn, textareaColumn, buttonColumn);
 
   return row;
 };
@@ -95,11 +93,11 @@ $(document).on('click', '.save-button', function (event) {
   // should see what i already have in local storage
   let buttonClicked = $(event.target);
 
+  // traverse to buttons
   let textarea = buttonClicked.parent().prev().children();
-
-  let timeCol = buttonClicked.parent().prev().prev();
-
-  let time = timeCol.text();
+  let timeColumn = buttonClicked.parent().prev().prev();
+  
+  let time = timeColumn.text();
 
   let hour = time.slice(0, -3);
 
@@ -109,3 +107,4 @@ $(document).on('click', '.save-button', function (event) {
   // save to local storage with key being hour of timeblock
   localStorage.setItem(hour, userInput);
 });
+
