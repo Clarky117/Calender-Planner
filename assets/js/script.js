@@ -60,7 +60,7 @@ function createTimeBlock(hour) {
   let buttonColumn = $("<div>");
   buttonColumn.attr('class', 'button-col col-2');
 
-  let saveButton = $('<button class="btn btn-primary save-button saveBtn">');  
+  let saveButton = $('<button class="btn btn-primary saveBtn">');  
   saveButton.text('Save');
 
   buttonColumn.append(saveButton);
@@ -86,7 +86,7 @@ $(function () {
   };
 });
 
-$(document).on('click', '.save-button', function (event) {
+$(document).on('click', '.saveBtn', function (event) {
 
   // should see what i already have in local storage
   let buttonClicked = $(event.target);

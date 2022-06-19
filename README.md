@@ -25,14 +25,11 @@ When clicking on the text area you are then able to write yourself a to do note 
 
 <br><br>
 
-**p**
-![]()<br><br>
+**Date and Time in header**
+![DateAndTime](/assets/images/DateAndTime.png)<br><br>
 
-**p**
-![]()<br><br>
-
-**p**
-![]<br><br>
+**Dynamically updated time blocks**
+![TimeBlocks](/assets/images/TimeBlocks.png)<br><br>
 
 ## Things i want to work on
 
