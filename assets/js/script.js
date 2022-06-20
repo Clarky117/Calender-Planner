@@ -67,7 +67,10 @@ function createTimeBlock(hour) {
   // first column of row
   let timeColumn = $("<div>");
   timeColumn.attr('class', 'time-col col-2');
-  timeColumn.text(hour + ":00");
+  // call remainder to convert 24 hour into 12
+  let twelveHour = hour >= 13 ? hour %12: hour;
+  // append new time
+  timeColumn.text(twelveHour + ":00");
   // second column of row
   let textareaColumn = $("<div >");
   textareaColumn.attr('class', 'textarea-col col-8');
