@@ -73,3 +73,12 @@ textarea {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+.button-col .btn {
+  position: absolute;
+  height: auto;
+  bottom: -1px;
+  top: -1px;
+  left: 60px;
+  right: -20px;
+}
