@@ -1,6 +1,6 @@
 # Calender-Planner
 
-In week 5 of the UWA Coding Bootcamp we have been given the HTML and CSS framework so we can code a simple daily planner app using JQuery and Moment.<br><br>
+Have been given the HTML and CSS framework so I could code a simple daily planner app using JQuery and Moment.<br><br>
 
 ## Key Points
 
